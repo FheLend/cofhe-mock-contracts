@@ -263,7 +263,7 @@ abstract contract MockCoFHE {
         }
         if (opIs(operation, FunctionId.div)) {
             if (_get(input2) == 0) {
-                set(ctHash, type(uint256).max);
+                _set(ctHash, type(uint256).max);
             } else {
                 _set(ctHash, _get(input1) / _get(input2));
             }
@@ -272,7 +272,7 @@ abstract contract MockCoFHE {
         }
         if (opIs(operation, FunctionId.rem)) {
             if (_get(input2) == 0) {
-                set(ctHash, type(uint256).max);
+                _set(ctHash, type(uint256).max);
             } else {
                 _set(ctHash, _get(input1) % _get(input2));
             }
